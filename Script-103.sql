@@ -3,6 +3,7 @@ CREATE ROLE novo_usuario WITH LOGIN PASSWORD 'sua_senha_segura';
 
 -- Conceder permissões
 grant all on <tabela> to <usuario>
+GRANT ALL ON TABLE public.factstaticindicators TO gabriel_ds;
 
 -- tirar as permissões
 revoke select on <tabela> to <usuario>
