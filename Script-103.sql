@@ -23,3 +23,17 @@ BEGIN
         EXECUTE obj;
     END LOOP;
 END;
+
+1. Conceder permissão para criar tabelas em um esquema específico
+GRANT CREATE ON SCHEMA public TO usuario;
+
+2. Conceder permissão de conexão ao banco (se necessário)
+GRANT USAGE, CREATE ON SCHEMA public TO usuario;
+
+3. Conceder todas as permissões no esquema (opcional)
+Se o usuário precisar de mais permissões dentro do esquema:
+GRANT USAGE, CREATE ON SCHEMA public TO usuario;
+🔹 USAGE → Permite acessar o esquema.
+🔹 CREATE → Permite criar tabelas e outros objetos dentro do esquema.
+
+
